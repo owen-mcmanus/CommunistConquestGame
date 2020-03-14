@@ -8,6 +8,7 @@ public class RollDieScript : MonoBehaviour
     [HideInInspector]
     public int randNum = 0;
 
+    public Text textOut;
     public Button ownbutt;
     
     void Start()
@@ -23,5 +24,6 @@ public class RollDieScript : MonoBehaviour
     void Roll()
     {
         randNum = Random.Range(1, 4);
+        //textOut.text = randNum.ToString();
     }
 }
