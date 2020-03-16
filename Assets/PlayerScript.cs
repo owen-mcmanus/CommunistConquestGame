@@ -21,7 +21,6 @@ public class PlayerScript : MonoBehaviour
     [HideInInspector]
     public int indP = 30;
 
-    [HideInInspector]
     public int playerNum = 1;
 
     private Text resPoint;

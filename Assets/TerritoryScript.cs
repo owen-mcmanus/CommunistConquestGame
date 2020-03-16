@@ -13,7 +13,7 @@ public class TerritoryScript : MonoBehaviour
     public string[] boarderingTerr;
 
     [HideInInspector]
-    public int owner;
+    public int owner = 0;
 
     private GameObject player;
     private PlayerScript ps;
