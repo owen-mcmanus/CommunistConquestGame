@@ -18,6 +18,7 @@ public class TerritoryScript : MonoBehaviour
     private GameObject player;
     private PlayerScript ps;
     private GameObject terr;
+    private EventScript events;
 
     private Text terrname;
     private Text terrcost;
@@ -36,6 +37,7 @@ public class TerritoryScript : MonoBehaviour
         terrcost = GameObject.Find("Canvas").transform.Find("Panel").transform.Find("Cost").GetComponent<Text>();
         terrgain = GameObject.Find("Canvas").transform.Find("Panel").transform.Find("Gain").GetComponent<Text>();
         buybutt = GameObject.Find("Canvas").transform.Find("Panel").transform.Find("Button").GetComponent<BuyScritpt>();
+        events = GameObject.Find("Canvas").transform.Find("EventPanel").transform.Find("CardText").GetComponent<EventScript>();
     }
 
     void Update()
@@ -59,6 +61,7 @@ public class TerritoryScript : MonoBehaviour
             }
         }
         if(ps.moveSpaces > 0) { i = true; }
+        retMil += events.territoryMod;
     }
 
     void OnMouseDown()
